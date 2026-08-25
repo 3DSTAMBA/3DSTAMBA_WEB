@@ -1,297 +1,299 @@
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3D სტამბა / 3D Stamba — 3D ბეჭდვა, სკანირება და მოდელირება თბილისში</title>
-<meta name="description" content="3D სტამბა — 3D ბეჭდვის, სკანირებისა და მოდელირების სერვისი თბილისში. პროტოტიპები, სათადარიგო ნაწილები, მაკეტები და ინდივიდუალური შეკვეთები. 2021 წლიდან.">
-<link rel="canonical" href="https://www.3dstamba.ge/">
-<meta property="og:title" content="3D სტამბა / 3D Stamba">
-<meta property="og:description" content="3D ბეჭდვა, სკანირება და მოდელირება თბილისში. გამოგვიგზავნეთ ფაილი ან იდეა.">
-<meta property="og:url" content="https://www.3dstamba.ge/">
-<meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D სტამბა / 3D Stamba — 3D ბეჭდვა, სკანირება და მოდელირება თბილისში</title>
+  <link rel="icon" href="image/Logo.png">
+  <meta name="description" content="3D სტამბა — 3D ბეჭდვის, სკანირებისა და მოდელირების სერვისი თბილისში. პროტოტიპები, სათადარიგო ნაწილები, მაკეტები და ინდივიდუალური შეკვეთები. 2021 წლიდან.">
+  <link rel="canonical" href="https://www.3dstamba.ge/">
+  <meta property="og:title" content="3D სტამბა / 3D Stamba">
+  <meta property="og:description" content="3D ბეჭდვა, სკანირება და მოდელირება თბილისში. გამოგვიგზავნეთ ფაილი ან იდეა.">
+  <meta property="og:url" content="https://www.3dstamba.ge/">
+  <meta property="og:type" content="website">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-:root{
-  --void:#0B1119;
-  --steel:#141E2B;
-  --navy:#1B3A5C;
-  --line:rgba(245,168,0,.16);
-  --line-soft:rgba(159,182,206,.14);
-  --amber:#F5A800;
-  --amber-soft:#FFC547;
-  --ice:#9FB6CE;
-  --white:#E9F0F7;
+    :root{
+      --void:#0B1119;
+      --steel:#141E2B;
+      --navy:#1B3A5C;
+      --line:rgba(245,168,0,.16);
+      --line-soft:rgba(159,182,206,.14);
+      --amber:#F5A800;
+      --amber-soft:#FFC547;
+      --ice:#9FB6CE;
+      --white:#E9F0F7;
 
-  --display:'Space Grotesk','Noto Sans Georgian',system-ui,sans-serif;
-  --body:'Noto Sans Georgian','Space Grotesk',system-ui,sans-serif;
-  --mono:'Space Mono','Noto Sans Georgian',ui-monospace,monospace;
+      --display:'Space Grotesk','Noto Sans Georgian',system-ui,sans-serif;
+      --body:'Noto Sans Georgian','Space Grotesk',system-ui,sans-serif;
+      --mono:'Space Mono','Noto Sans Georgian',ui-monospace,monospace;
 
-  --pad:clamp(1.25rem,5vw,4rem);
-  --nav-h:112px;
-}
+      --pad:clamp(1.25rem,5vw,4rem);
+      --nav-h:112px;
+    }
 
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{
-  font-family:var(--body);
-  background:var(--void);
-  color:var(--white);
-  line-height:1.6;
-  overflow-x:hidden;
-}
-img{max-width:100%;display:block}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:3px}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      font-family:var(--body);
+      background:var(--void);
+      color:var(--white);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    :focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:3px}
 
-/* ---------- shared type ---------- */
-.mono{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
-.eyebrow{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem}
-.eyebrow::after{content:'';height:1px;flex:1;background:var(--line);max-width:120px}
-h2{
-  font-family:var(--display);
-  font-size:clamp(1.6rem,3.4vw,2.5rem);
-  font-weight:700;line-height:1.15;letter-spacing:-.02em;
-  margin-bottom:.9rem;
-}
-.lede{color:var(--ice);max-width:52ch;font-size:clamp(.95rem,1.4vw,1.05rem)}
+    /* ---------- shared type ---------- */
+    .mono{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+    .eyebrow{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem}
+    .eyebrow::after{content:'';height:1px;flex:1;background:var(--line);max-width:120px}
+    h2{
+      font-family:var(--display);
+      font-size:clamp(1.6rem,3.4vw,2.5rem);
+      font-weight:700;line-height:1.15;letter-spacing:-.02em;
+      margin-bottom:.9rem;
+    }
+    .lede{color:var(--ice);max-width:52ch;font-size:clamp(.95rem,1.4vw,1.05rem)}
 
-/* ---------- layer rule: the signature divider ---------- */
-.layers{height:14px;width:100%;
-  background:repeating-linear-gradient(to bottom,
-    rgba(245,168,0,.30) 0 1px, transparent 1px 4px);
-  opacity:.55}
+    /* ---------- layer rule: the signature divider ---------- */
+    .layers{height:14px;width:100%;
+      background:repeating-linear-gradient(to bottom,
+        rgba(245,168,0,.30) 0 1px, transparent 1px 4px);
+      opacity:.55}
 
-/* ---------- top bars ---------- */
-.utility{
-  position:fixed;inset:0 0 auto 0;z-index:120;
-  display:flex;align-items:center;justify-content:space-between;gap:1rem;
-  padding:.45rem var(--pad);
-  background:var(--void);border-bottom:1px solid var(--line-soft);
-  font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ice)
-}
-.utility .status{display:flex;align-items:center;gap:.5rem}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex:none;animation:pulse 2.4s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
-.langs{display:flex;gap:.25rem;flex:none}
-.lang{
-  background:none;border:1px solid transparent;color:var(--ice);
-  font:inherit;padding:.2rem .55rem;border-radius:3px;cursor:pointer;transition:.18s
-}
-.lang:hover{color:var(--white);border-color:var(--line)}
-.lang[aria-pressed="true"]{background:var(--amber);color:var(--void);border-color:var(--amber)}
+    /* ---------- top bars ---------- */
+    .utility{
+      position:fixed;inset:0 0 auto 0;z-index:120;
+      display:flex;align-items:center;justify-content:space-between;gap:1rem;
+      padding:.45rem var(--pad);
+      background:var(--void);border-bottom:1px solid var(--line-soft);
+      font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ice)
+    }
+    .utility .status{display:flex;align-items:center;gap:.5rem}
+    .dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex:none;animation:pulse 2.4s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+    .langs{display:flex;gap:.25rem;flex:none}
+    .lang{
+      background:none;border:1px solid transparent;color:var(--ice);
+      font:inherit;padding:.2rem .55rem;border-radius:3px;cursor:pointer;transition:.18s
+    }
+    .lang:hover{color:var(--white);border-color:var(--line)}
+    .lang[aria-pressed="true"]{background:var(--amber);color:var(--void);border-color:var(--amber)}
 
-nav{
-  position:fixed;top:29px;left:0;right:0;z-index:110;
-  display:flex;align-items:center;justify-content:space-between;gap:1rem;
-  padding:.85rem var(--pad);
-  background:rgba(11,17,25,.9);backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line-soft);
-}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-.mark{width:40px;height:40px;border-radius:50%;background:var(--amber);display:grid;place-items:center;flex:none}
-.mark svg{width:24px;height:24px}
-.brand b{font-family:var(--display);font-size:1.05rem;font-weight:700;letter-spacing:.01em;display:block;line-height:1.1}
-.brand small{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--ice);text-transform:uppercase}
-.menu{display:flex;align-items:center;gap:1.75rem}
-.menu a{font-size:.82rem;font-weight:500;text-decoration:none;color:var(--ice);transition:color .18s}
-.menu a:hover{color:var(--amber)}
-.btn-order{
-  background:var(--amber);color:var(--void);text-decoration:none;
-  padding:.6rem 1.2rem;border-radius:4px;font-weight:700;font-size:.85rem;
-  transition:.18s;white-space:nowrap
-}
-.btn-order:hover{background:var(--amber-soft)}
-.burger{display:none;background:none;border:1px solid var(--line);border-radius:4px;color:var(--white);padding:.45rem .6rem;cursor:pointer}
+    nav{
+      position:fixed;top:29px;left:0;right:0;z-index:110;
+      display:flex;align-items:center;justify-content:space-between;gap:1rem;
+      padding:.85rem var(--pad);
+      background:rgba(11,17,25,.9);backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line-soft);
+    }
+    .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+    .mark{width:40px;height:40px;border-radius:50%;background:var(--amber);display:grid;place-items:center;flex:none}
+    .mark svg{width:24px;height:24px}
+    .mark img{width:100%;height:100%;object-fit:contain;border-radius:50%}
+    .brand b{font-family:var(--display);font-size:1.05rem;font-weight:700;letter-spacing:.01em;display:block;line-height:1.1}
+    .brand small{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--ice);text-transform:uppercase}
+    .menu{display:flex;align-items:center;gap:1.75rem}
+    .menu a{font-size:.82rem;font-weight:500;text-decoration:none;color:var(--ice);transition:color .18s}
+    .menu a:hover{color:var(--amber)}
+    .btn-order{
+      background:var(--amber);color:var(--void);text-decoration:none;
+      padding:.6rem 1.2rem;border-radius:4px;font-weight:700;font-size:.85rem;
+      transition:.18s;white-space:nowrap
+    }
+    .btn-order:hover{background:var(--amber-soft)}
+    .burger{display:none;background:none;border:1px solid var(--line);border-radius:4px;color:var(--white);padding:.45rem .6rem;cursor:pointer}
 
-/* ---------- hero ---------- */
-.hero{
-  position:relative;min-height:100svh;display:flex;align-items:center;
-  padding:calc(var(--nav-h) + 2rem) var(--pad) 3rem;overflow:hidden;
-  background:radial-gradient(120% 90% at 78% 22%,#22364F 0%,#0B1119 62%);
-}
-.plate{
-  position:absolute;left:50%;bottom:-10%;width:180%;height:60%;
-  transform:translateX(-50%) perspective(700px) rotateX(72deg);
-  background-image:
-    linear-gradient(rgba(159,182,206,.16) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(159,182,206,.16) 1px,transparent 1px);
-  background-size:56px 56px;
-  mask-image:linear-gradient(to top,#000 0%,transparent 78%);
-  -webkit-mask-image:linear-gradient(to top,#000 0%,transparent 78%);
-  pointer-events:none
-}
-.hero-inner{position:relative;z-index:2;width:100%;max-width:1180px;margin:0 auto;
-  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.tagline{
-  display:inline-flex;align-items:center;gap:.55rem;
-  border:1px solid var(--line);border-radius:100px;padding:.35rem .9rem;
-  font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);
-  margin-bottom:1.6rem
-}
-h1{
-  font-family:var(--display);
-  font-size:clamp(2.1rem,5.4vw,3.9rem);
-  font-weight:700;line-height:1.04;letter-spacing:-.03em;margin-bottom:1.25rem
-}
-h1 em{font-style:normal;color:var(--amber)}
-:lang(ka) h1{font-weight:800;letter-spacing:-.01em;line-height:1.18}
-.hero p{color:var(--ice);font-size:clamp(.98rem,1.5vw,1.1rem);max-width:46ch;margin-bottom:2rem}
-.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2.25rem}
-.btn{
-  display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;
-  padding:.85rem 1.6rem;border-radius:5px;font-weight:700;font-size:.95rem;transition:.2s;border:1.5px solid transparent
-}
-.btn-primary{background:var(--amber);color:var(--void)}
-.btn-primary:hover{background:var(--amber-soft);transform:translateY(-2px)}
-.btn-ghost{border-color:var(--line-soft);color:var(--white)}
-.btn-ghost:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
-.hero-meta{display:flex;flex-wrap:wrap;gap:1.75rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ice)}
-.hero-meta b{display:block;font-family:var(--display);font-size:1.35rem;color:var(--amber);letter-spacing:0;margin-bottom:.15rem}
+    /* ---------- hero ---------- */
+    .hero{
+      position:relative;min-height:100svh;display:flex;align-items:center;
+      padding:calc(var(--nav-h) + 2rem) var(--pad) 3rem;overflow:hidden;
+      background:radial-gradient(120% 90% at 78% 22%,#22364F 0%,#0B1119 62%);
+    }
+    .plate{
+      position:absolute;left:50%;bottom:-10%;width:180%;height:60%;
+      transform:translateX(-50%) perspective(700px) rotateX(72deg);
+      background-image:
+        linear-gradient(rgba(159,182,206,.16) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(159,182,206,.16) 1px,transparent 1px);
+      background-size:56px 56px;
+      mask-image:linear-gradient(to top,#000 0%,transparent 78%);
+      -webkit-mask-image:linear-gradient(to top,#000 0%,transparent 78%);
+      pointer-events:none
+    }
+    .hero-inner{position:relative;z-index:2;width:100%;max-width:1180px;margin:0 auto;
+      display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+    .tagline{
+      display:inline-flex;align-items:center;gap:.55rem;
+      border:1px solid var(--line);border-radius:100px;padding:.35rem .9rem;
+      font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);
+      margin-bottom:1.6rem
+    }
+    h1{
+      font-family:var(--display);
+      font-size:clamp(2.1rem,5.4vw,3.9rem);
+      font-weight:700;line-height:1.04;letter-spacing:-.03em;margin-bottom:1.25rem
+    }
+    h1 em{font-style:normal;color:var(--amber)}
+    :lang(ka) h1{font-weight:800;letter-spacing:-.01em;line-height:1.18}
+    .hero p{color:var(--ice);font-size:clamp(.98rem,1.5vw,1.1rem);max-width:46ch;margin-bottom:2rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2.25rem}
+    .btn{
+      display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;
+      padding:.85rem 1.6rem;border-radius:5px;font-weight:700;font-size:.95rem;transition:.2s;border:1.5px solid transparent
+    }
+    .btn-primary{background:var(--amber);color:var(--void)}
+    .btn-primary:hover{background:var(--amber-soft);transform:translateY(-2px)}
+    .btn-ghost{border-color:var(--line-soft);color:var(--white)}
+    .btn-ghost:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:1.75rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ice)}
+    .hero-meta b{display:block;font-family:var(--display);font-size:1.35rem;color:var(--amber);letter-spacing:0;margin-bottom:.15rem}
 
-/* printer illustration */
-.rig{width:100%;max-width:430px;margin-inline:auto;filter:drop-shadow(0 24px 60px rgba(0,0,0,.55))}
-@keyframes head{0%,100%{transform:translateX(-42px)}50%{transform:translateX(42px)}}
-@keyframes rise{from{transform:translateY(26px)}to{transform:translateY(0)}}
-.headgrp{animation:head 3.6s ease-in-out infinite;transform-origin:center}
-.stack{animation:rise 3.6s ease-in-out infinite alternate}
+    /* printer illustration */
+    .rig{width:100%;max-width:430px;margin-inline:auto;filter:drop-shadow(0 24px 60px rgba(0,0,0,.55))}
+    @keyframes head{0%,100%{transform:translateX(-42px)}50%{transform:translateX(42px)}}
+    @keyframes rise{from{transform:translateY(26px)}to{transform:translateY(0)}}
+    .headgrp{animation:head 3.6s ease-in-out infinite;transform-origin:center}
+    .stack{animation:rise 3.6s ease-in-out infinite alternate}
 
-/* ---------- materials ticker ---------- */
-.ticker{background:var(--amber);color:var(--void);overflow:hidden;padding:.6rem 0;border-block:1px solid rgba(0,0,0,.15)}
-.ticker-track{display:flex;gap:2.5rem;width:max-content;animation:slide 26s linear infinite;font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
-.ticker-track span{display:flex;align-items:center;gap:2.5rem;white-space:nowrap}
-.ticker-track span::after{content:'◆';font-size:.6rem;opacity:.55}
-@keyframes slide{to{transform:translateX(-50%)}}
+    /* ---------- materials ticker ---------- */
+    .ticker{background:var(--amber);color:var(--void);overflow:hidden;padding:.6rem 0;border-block:1px solid rgba(0,0,0,.15)}
+    .ticker-track{display:flex;gap:2.5rem;width:max-content;animation:slide 26s linear infinite;font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+    .ticker-track span{display:flex;align-items:center;gap:2.5rem;white-space:nowrap}
+    .ticker-track span::after{content:'◆';font-size:.6rem;opacity:.55}
+    @keyframes slide{to{transform:translateX(-50%)}}
 
-/* ---------- sections ---------- */
-section{padding:clamp(3.5rem,8vw,6.5rem) var(--pad)}
-.wrap{max-width:1180px;margin:0 auto}
-.head{margin-bottom:clamp(2.25rem,5vw,3.5rem)}
+    /* ---------- sections ---------- */
+    section{padding:clamp(3.5rem,8vw,6.5rem) var(--pad)}
+    .wrap{max-width:1180px;margin:0 auto}
+    .head{margin-bottom:clamp(2.25rem,5vw,3.5rem)}
 
-/* pipeline */
-#services{background:var(--steel)}
-.pipe{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
-.step{background:var(--steel);padding:clamp(1.5rem,3vw,2.25rem);position:relative;transition:background .25s}
-.step:hover{background:#182536}
-.step-n{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;color:var(--amber);opacity:.75;margin-bottom:1.5rem}
-.step svg.ico{width:34px;height:34px;stroke:var(--amber);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1.1rem}
-.step h3{font-family:var(--display);font-size:1.15rem;font-weight:700;margin-bottom:.6rem}
-:lang(ka) .step h3{font-weight:800}
-.step p{font-size:.9rem;color:var(--ice);line-height:1.7}
-.step-tags{margin-top:1.1rem;display:flex;flex-wrap:wrap;gap:.35rem}
-.tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ice);border:1px solid var(--line-soft);border-radius:3px;padding:.2rem .5rem}
+    /* pipeline */
+    #services{background:var(--steel)}
+    .pipe{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+    .step{background:var(--steel);padding:clamp(1.5rem,3vw,2.25rem);position:relative;transition:background .25s}
+    .step:hover{background:#182536}
+    .step-n{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;color:var(--amber);opacity:.75;margin-bottom:1.5rem}
+    .step svg.ico{width:34px;height:34px;stroke:var(--amber);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1.1rem}
+    .step h3{font-family:var(--display);font-size:1.15rem;font-weight:700;margin-bottom:.6rem}
+    :lang(ka) .step h3{font-weight:800}
+    .step p{font-size:.9rem;color:var(--ice);line-height:1.7}
+    .step-tags{margin-top:1.1rem;display:flex;flex-wrap:wrap;gap:.35rem}
+    .tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ice);border:1px solid var(--line-soft);border-radius:3px;padding:.2rem .5rem}
 
-/* work */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.card{border:1px solid var(--line-soft);border-radius:8px;overflow:hidden;background:var(--steel);transition:.25s}
-.card:hover{transform:translateY(-4px);border-color:var(--line)}
-.thumb{aspect-ratio:4/3;display:grid;place-items:center;position:relative;background:var(--navy);overflow:hidden}
-.thumb svg{width:70%;height:70%}
-.pill{position:absolute;top:.7rem;left:.7rem;background:var(--amber);color:var(--void);font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:.22rem .55rem;border-radius:3px}
-.card-body{padding:1.15rem 1.25rem 1.4rem}
-.card-body h4{font-family:var(--display);font-size:.98rem;font-weight:700;margin-bottom:.4rem}
-:lang(ka) .card-body h4{font-weight:800}
-.card-body p{font-size:.85rem;color:var(--ice);line-height:1.65}
-.note{margin-top:2rem;font-size:.85rem;color:var(--ice)}
-.note a{color:var(--amber)}
+    /* work */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .card{border:1px solid var(--line-soft);border-radius:8px;overflow:hidden;background:var(--steel);transition:.25s}
+    .card:hover{transform:translateY(-4px);border-color:var(--line)}
+    .thumb{aspect-ratio:4/3;display:grid;place-items:center;position:relative;background:var(--navy);overflow:hidden}
+    .thumb svg{width:70%;height:70%}
+    .pill{position:absolute;top:.7rem;left:.7rem;background:var(--amber);color:var(--void);font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:.22rem .55rem;border-radius:3px}
+    .card-body{padding:1.15rem 1.25rem 1.4rem}
+    .card-body h4{font-family:var(--display);font-size:.98rem;font-weight:700;margin-bottom:.4rem}
+    :lang(ka) .card-body h4{font-weight:800}
+    .card-body p{font-size:.85rem;color:var(--ice);line-height:1.65}
+    .note{margin-top:2rem;font-size:.85rem;color:var(--ice)}
+    .note a{color:var(--amber)}
 
-/* numbers */
-#about{background:var(--steel)}
-.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4rem);align-items:center}
-.about-grid p+p{margin-top:1rem}
-.about-grid p{color:var(--ice)}
-.figures{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
-.fig{background:var(--steel);padding:1.5rem 1.25rem}
-.fig b{display:block;font-family:var(--display);font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700;color:var(--amber);letter-spacing:-.02em;line-height:1}
-.fig span{display:block;margin-top:.45rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ice)}
+    /* numbers */
+    #about{background:var(--steel)}
+    .about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4rem);align-items:center}
+    .about-grid p+p{margin-top:1rem}
+    .about-grid p{color:var(--ice)}
+    .figures{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+    .fig{background:var(--steel);padding:1.5rem 1.25rem}
+    .fig b{display:block;font-family:var(--display);font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700;color:var(--amber);letter-spacing:-.02em;line-height:1}
+    .fig span{display:block;margin-top:.45rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ice)}
 
-/* ---------- order ticket ---------- */
-#order{background:var(--void)}
-.ticket{
-  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
-  border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--steel)
-}
-.ticket-form{padding:clamp(1.4rem,3vw,2.25rem)}
-.field{margin-bottom:1rem}
-.field label{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ice);margin-bottom:.4rem}
-.field input,.field select,.field textarea{
-  width:100%;background:var(--void);border:1px solid var(--line-soft);color:var(--white);
-  font-family:var(--body);font-size:.92rem;padding:.7rem .85rem;border-radius:5px;transition:border-color .18s
-}
-.field textarea{min-height:110px;resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--amber);outline:none}
-.field input::placeholder,.field textarea::placeholder{color:#5B7189}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem}
-.chip{
-  font-family:var(--body);font-size:.85rem;color:var(--ice);cursor:pointer;
-  border:1px solid var(--line-soft);border-radius:100px;padding:.45rem 1rem;background:var(--void);transition:.18s
-}
-.chip:hover{color:var(--white);border-color:var(--line)}
-.chip[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:var(--void);font-weight:700}
-.submit-row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-top:1.4rem}
-button.btn{border:1.5px solid transparent;cursor:pointer;font-family:var(--body)}
-.hint{font-size:.78rem;color:var(--ice);margin-top:.9rem;line-height:1.6}
-.hint a{color:var(--amber)}
+    /* ---------- order ticket ---------- */
+    #order{background:var(--void)}
+    .ticket{
+      display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+      border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--steel)
+    }
+    .ticket-form{padding:clamp(1.4rem,3vw,2.25rem)}
+    .field{margin-bottom:1rem}
+    .field label{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ice);margin-bottom:.4rem}
+    .field input,.field select,.field textarea{
+      width:100%;background:var(--void);border:1px solid var(--line-soft);color:var(--white);
+      font-family:var(--body);font-size:.92rem;padding:.7rem .85rem;border-radius:5px;transition:border-color .18s
+    }
+    .field textarea{min-height:110px;resize:vertical}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--amber);outline:none}
+    .field input::placeholder,.field textarea::placeholder{color:#5B7189}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .chips{display:flex;flex-wrap:wrap;gap:.5rem}
+    .chip{
+      font-family:var(--body);font-size:.85rem;color:var(--ice);cursor:pointer;
+      border:1px solid var(--line-soft);border-radius:100px;padding:.45rem 1rem;background:var(--void);transition:.18s
+    }
+    .chip:hover{color:var(--white);border-color:var(--line)}
+    .chip[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:var(--void);font-weight:700}
+    .submit-row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-top:1.4rem}
+    button.btn{border:1.5px solid transparent;cursor:pointer;font-family:var(--body)}
+    .hint{font-size:.78rem;color:var(--ice);margin-top:.9rem;line-height:1.6}
+    .hint a{color:var(--amber)}
 
-.preview{background:var(--void);border-left:1px solid var(--line-soft);padding:clamp(1.4rem,3vw,2.25rem);display:flex;flex-direction:column}
-.preview-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem;padding-bottom:.9rem;border-bottom:1px dashed var(--line-soft)}
-.preview-head strong{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-weight:700}
-pre.mail{
-  font-family:var(--mono);font-size:.74rem;line-height:1.85;color:var(--ice);
-  white-space:pre-wrap;word-break:break-word;flex:1;margin:0
-}
-pre.mail b{color:var(--white);font-weight:700}
-.copied{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);opacity:0;transition:opacity .2s}
-.copied.on{opacity:1}
+    .preview{background:var(--void);border-left:1px solid var(--line-soft);padding:clamp(1.4rem,3vw,2.25rem);display:flex;flex-direction:column}
+    .preview-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem;padding-bottom:.9rem;border-bottom:1px dashed var(--line-soft)}
+    .preview-head strong{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-weight:700}
+    pre.mail{
+      font-family:var(--mono);font-size:.74rem;line-height:1.85;color:var(--ice);
+      white-space:pre-wrap;word-break:break-word;flex:1;margin:0
+    }
+    pre.mail b{color:var(--white);font-weight:700}
+    .copied{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);opacity:0;transition:opacity .2s}
+    .copied.on{opacity:1}
 
-/* ---------- contact ---------- */
-#contact{background:var(--navy)}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem}
-.contact-item{display:flex;gap:.9rem;align-items:flex-start}
-.c-ico{width:42px;height:42px;flex:none;border:1px solid var(--line);border-radius:7px;display:grid;place-items:center;background:rgba(245,168,0,.08)}
-.c-ico svg{width:19px;height:19px;stroke:var(--amber);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.c-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ice);margin-bottom:.2rem}
-.c-val{font-size:.95rem;font-weight:500;word-break:break-word}
-.c-val a{color:var(--amber);text-decoration:none}
-.c-val a:hover{text-decoration:underline}
+    /* ---------- contact ---------- */
+    #contact{background:var(--navy)}
+    .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem}
+    .contact-item{display:flex;gap:.9rem;align-items:flex-start}
+    .c-ico{width:42px;height:42px;flex:none;border:1px solid var(--line);border-radius:7px;display:grid;place-items:center;background:rgba(245,168,0,.08)}
+    .c-ico svg{width:19px;height:19px;stroke:var(--amber);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .c-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ice);margin-bottom:.2rem}
+    .c-val{font-size:.95rem;font-weight:500;word-break:break-word}
+    .c-val a{color:var(--amber);text-decoration:none}
+    .c-val a:hover{text-decoration:underline}
 
-/* ---------- footer ---------- */
-footer{background:var(--void);padding:2rem var(--pad);display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;border-top:1px solid var(--line-soft)}
-footer p{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ice)}
-footer p b{color:var(--amber)}
+    /* ---------- footer ---------- */
+    footer{background:var(--void);padding:2rem var(--pad);display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;border-top:1px solid var(--line-soft)}
+    footer p{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ice)}
+    footer p b{color:var(--amber)}
 
-/* ---------- responsive ---------- */
-@media(max-width:960px){
-  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
-  .rig{max-width:330px}
-  .pipe{grid-template-columns:1fr}
-  .grid{grid-template-columns:1fr 1fr}
-  .about-grid{grid-template-columns:1fr}
-  .ticket{grid-template-columns:1fr}
-  .preview{border-left:none;border-top:1px solid var(--line-soft)}
-  .menu{display:none}
-  .menu.open{
-    display:flex;flex-direction:column;align-items:flex-start;gap:1rem;
-    position:absolute;top:100%;left:0;right:0;background:var(--void);
-    padding:1.25rem var(--pad);border-bottom:1px solid var(--line)
-  }
-  .burger{display:block}
-}
-@media(max-width:620px){
-  .grid{grid-template-columns:1fr}
-  .row{grid-template-columns:1fr}
-  .hero-meta{gap:1.25rem}
-}
-@media(prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-}
-</style>
+    /* ---------- responsive ---------- */
+    @media(max-width:960px){
+      .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+      .rig{max-width:330px}
+      .pipe{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .about-grid{grid-template-columns:1fr}
+      .ticket{grid-template-columns:1fr}
+      .preview{border-left:none;border-top:1px solid var(--line-soft)}
+      .menu{display:none}
+      .menu.open{
+        display:flex;flex-direction:column;align-items:flex-start;gap:1rem;
+        position:absolute;top:100%;left:0;right:0;background:var(--void);
+        padding:1.25rem var(--pad);border-bottom:1px solid var(--line)
+      }
+      .burger{display:block}
+    }
+    @media(max-width:620px){
+      .grid{grid-template-columns:1fr}
+      .row{grid-template-columns:1fr}
+      .hero-meta{gap:1.25rem}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    }
+  </style>
 </head>
 <body>
 
@@ -301,7 +303,6 @@ footer p b{color:var(--amber)}
   <div class="langs" role="group" aria-label="Language">
     <button class="lang" data-lang="ka" aria-pressed="true">ქარ</button>
     <button class="lang" data-lang="en" aria-pressed="false">ENG</button>
-    <button class="lang" data-lang="ru" aria-pressed="false">РУС</button>
   </div>
 </div>
 
@@ -309,12 +310,7 @@ footer p b{color:var(--amber)}
 <nav>
   <a class="brand" href="#top">
     <span class="mark">
-      <svg viewBox="0 0 32 32" aria-hidden="true">
-        <polygon points="16,3 28,10 28,22 16,29 4,22 4,10" fill="#1B3A5C"/>
-        <polygon points="16,7 24,12 24,22 16,27 8,22 8,12" fill="#2A5580"/>
-        <polygon points="16,11 21,14 21,20 16,23 11,20 11,14" fill="#F5A800"/>
-        <polygon points="16,14 19,16 19,20 16,22 13,20 13,16" fill="#1B3A5C"/>
-      </svg>
+      <img src="image/Logo.png" alt="3D Stamba">
     </span>
     <span>
       <b>3D STAMBA</b>
@@ -730,10 +726,7 @@ footer p b{color:var(--amber)}
 <footer>
   <a class="brand" href="#top" style="text-decoration:none">
     <span class="mark" style="width:32px;height:32px">
-      <svg viewBox="0 0 32 32" style="width:18px;height:18px" aria-hidden="true">
-        <polygon points="16,3 28,10 28,22 16,29 4,22 4,10" fill="#1B3A5C"/>
-        <polygon points="16,11 21,14 21,20 16,23 11,20 11,14" fill="#F5A800"/>
-      </svg>
+      <img src="image/Logo.png" alt="">
     </span>
     <span><b style="font-size:.9rem">3D STAMBA</b></span>
   </a>
@@ -742,342 +735,268 @@ footer p b{color:var(--amber)}
 </footer>
 
 <script>
-/* ============================================================
-   TRANSLATIONS — edit text here, in one place, for all 3 languages
-   ============================================================ */
-const T = {
-ka:{
-  status:'თბილისი · ვიღებთ შეკვეთებს',
-  nav1:'სერვისები', nav2:'ნამუშევრები', nav3:'ჩვენ შესახებ', nav4:'კონტაქტი', navcta:'შეკვეთა',
-  badge:'3D ბეჭდვის სერვისი · 2021 წლიდან',
-  h1:'ვბეჭდავთ იმას, რაც ჯერ <em>არ არსებობს</em>.',
-  hsub:'3D სტამბა — ონლაინ საწარმო თბილისში. ვასკანერებთ, ვმოდელირებთ და ვბეჭდავთ დეტალებს, პროტოტიპებსა და მაკეტებს. გამოგვიგზავნეთ ფაილი — ან უბრალოდ იდეა.',
-  cta1:'შეკვეთის გაგზავნა', cta2:'ნამუშევრების ნახვა',
-  m1:'ბაზარზე', m2:'ფენის სიზუსტე', m3:'ჩვეულებრივი ვადა',
+  /* ============================================================
+     TRANSLATIONS — edit text here, in one place, for all 3 languages
+     ============================================================ */
+  const T = {
+  ka:{
+    status:'თბილისი · ვიღებთ შეკვეთებს',
+    nav1:'სერვისები', nav2:'ნამუშევრები', nav3:'ჩვენ შესახებ', nav4:'კონტაქტი', navcta:'შეკვეთა',
+    badge:'3D ბეჭდვის სერვისი · 2021 წლიდან',
+    h1:'ვბეჭდავთ იმას, რაც ჯერ <em>არ არსებობს</em>.',
+    hsub:'3D სტამბა — ონლაინ საწარმო თბილისში. ვასკანერებთ, ვმოდელირებთ და ვბეჭდავთ დეტალებს, პროტოტიპებსა და მაკეტებს. გამოგვიგზავნეთ ფაილი — ან უბრალოდ იდეა.',
+    cta1:'შეკვეთის გაგზავნა', cta2:'ნამუშევრების ნახვა',
+    m1:'ბაზარზე', m2:'ფენის სიზუსტე', m3:'ჩვეულებრივი ვადა',
 
-  eyeSvc:'რას ვაკეთებთ',
-  svcTitle:'სამი ეტაპი — რეალური საგნიდან რეალურ საგნამდე',
-  svcSub:'შეგიძლიათ ნებისმიერი ეტაპიდან შემოგვიერთდეთ: მზა ფაილით, ნახაზით, ფოტოთი ან თვით დეტალით.',
-  stepLabel1:'შეყვანა', stepLabel2:'მომზადება', stepLabel3:'დამზადება',
-  s1t:'3D სკანირება',
-  s1d:'რეალურ ობიექტს ვაქცევთ ზუსტ ციფრულ მოდელად. გამოსადეგია მაშინ, როცა დეტალი გაქვთ, ნახაზი კი — არა.',
-  s1tag:'რევერს-ინჟინერია',
-  s2t:'3D მოდელირება',
-  s2d:'CAD მოდელი ესკიზიდან, ფოტოდან ან ზომებიდან. ფაილს ისე ვამზადებთ, რომ ბეჭდვისას არ დაზიანდეს.',
-  s2tag:'მაკეტები',
-  s3t:'3D ბეჭდვა',
-  s3d:'FDM ბეჭდვა — ერთი დეტალიდან მცირე სერიამდე, 0.1 მმ ფენით.',
-  s3tag:'მცირე სერია',
+    eyeSvc:'რას ვაკეთებთ',
+    svcTitle:'სამი ეტაპი — რეალური საგნიდან რეალურ საგნამდე',
+    svcSub:'შეგიძლიათ ნებისმიერი ეტაპიდან შემოგვიერთდეთ: მზა ფაილით, ნახაზით, ფოტოთი ან თვით დეტალით.',
+    stepLabel1:'შეყვანა', stepLabel2:'მომზადება', stepLabel3:'დამზადება',
+    s1t:'3D სკანირება',
+    s1d:'რეალურ ობიექტს ვაქცევთ ზუსტ ციფრულ მოდელად. გამოსადეგია მაშინ, როცა დეტალი გაქვთ, ნახაზი კი — არა.',
+    s1tag:'რევერს-ინჟინერია',
+    s2t:'3D მოდელირება',
+    s2d:'CAD მოდელი ესკიზიდან, ფოტოდან ან ზომებიდან. ფაილს ისე ვამზადებთ, რომ ბეჭდვისას არ დაზიანდეს.',
+    s2tag:'მაკეტები',
+    s3t:'3D ბეჭდვა',
+    s3d:'FDM ბეჭდვა — ერთი დეტალიდან მცირე სერიამდე, 0.1 მმ ფენით.',
+    s3tag:'მცირე სერია',
 
-  eyeWork:'ჩვენი ნამუშევრები',
-  workTitle:'პროექტები, რომლებიც უკვე მუშაობს',
-  workSub:'ვმუშაობთ დარბაზებთან, კაფეებთან, არქიტექტორებთან, ინჟინრებთან და კერძო პირებთან.',
-  pillPrint:'ბეჭდვა', pillModel:'მოდელირება', pillScan:'სკანირება', pillCustom:'სპეც. შეკვეთა',
-  p1t:'სირთულის მარკერები საცოც დარბაზს',
-  p1d:'ფერადი, გამძლე მარკერები s.k.lucky-ს საცოც დარბაზისთვის — მზა ხვრელებით სამონტაჟოდ.',
-  p2t:'არქიტექტურული მაკეტები',
-  p2d:'ფასადებისა და კონსტრუქციების მაკეტები არქიტექტორებისთვის — პრეზენტაციისა და შეთანხმებისთვის.',
-  p3t:'კატის კედლის ავეჯი',
-  p3d:'კრონშტეინები და დამჭერები კედლის თაროებისთვის, ხის ელემენტებთან ერთად — მზა კომპლექტი.',
-  p4t:'ვიტრინა და დეკორი კაფესთვის',
-  p4d:'ბრენდის ფერებში დაბეჭდილი კედლის დეკორი ნაყინის სახლისთვის.',
-  p5t:'ავეჯისა და კიბის დამცავები',
-  p5d:'ზუსტად ზომაზე მორგებული დამცავები მაშინ, როცა ორიგინალი აღარ იშოვება — სკანირებით ან ზომებით.',
-  p6t:'ინდივიდუალური დეტალები',
-  p6d:'კორპუსები, სამაგრები და სათადარიგო ნაწილები — ესკიზიდან მზა დეტალამდე.',
-  workNote:'მეტი ნამუშევარი ყოველკვირეულად:',
+    eyeWork:'ჩვენი ნამუშევრები',
+    workTitle:'პროექტები, რომლებიც უკვე მუშაობს',
+    workSub:'ვმუშაობთ დარბაზებთან, კაფეებთან, არქიტექტორებთან, ინჟინრებთან და კერძო პირებთან.',
+    pillPrint:'ბეჭდვა', pillModel:'მოდელირება', pillScan:'სკანირება', pillCustom:'სპეც. შეკვეთა',
+    p1t:'სირთულის მარკერები საცოც დარბაზს',
+    p1d:'ფერადი, გამძლე მარკერები s.k.lucky-ს საცოც დარბაზისთვის — მზა ხვრელებით სამონტაჟოდ.',
+    p2t:'არქიტექტურული მაკეტები',
+    p2d:'ფასადებისა და კონსტრუქციების მაკეტები არქიტექტორებისთვის — პრეზენტაციისა და შეთანხმებისთვის.',
+    p3t:'კატის კედლის ავეჯი',
+    p3d:'კრონშტეინები და დამჭერები კედლის თაროებისთვის, ხის ელემენტებთან ერთად — მზა კომპლექტი.',
+    p4t:'ვიტრინა და დეკორი კაფესთვის',
+    p4d:'ბრენდის ფერებში დაბეჭდილი კედლის დეკორი ნაყინის სახლისთვის.',
+    p5t:'ავეჯისა და კიბის დამცავები',
+    p5d:'ზუსტად ზომაზე მორგებული დამცავები მაშინ, როცა ორიგინალი აღარ იშოვება — სკანირებით ან ზომებით.',
+    p6t:'ინდივიდუალური დეტალები',
+    p6d:'კორპუსები, სამაგრები და სათადარიგო ნაწილები — ესკიზიდან მზა დეტალამდე.',
+    workNote:'მეტი ნამუშევარი ყოველკვირეულად:',
 
-  eyeAbout:'ჩვენ შესახებ',
-  aboutTitle:'პატარა საწარმო, რომელიც სერიოზულ დეტალებს ბეჭდავს',
-  aboutP1:'3D სტამბა 2021 წლიდან მუშაობს თბილისში. დავიწყეთ ერთი პრინტერით და კერძო შეკვეთებით, დღეს კი ვმუშაობთ ბიზნესებთან, არქიტექტორებთან და ინჟინრებთან.',
-  aboutP2:'ჩვენ არ ვართ მაღაზია — ვართ საწარმო. ეს ნიშნავს, რომ შეკვეთაზე გელაპარაკებით სანამ დავბეჭდავთ: მასალაზე, სისქეზე, დატვირთვაზე და იმაზე, თუ როგორ დაიშლება დეტალი ხმარებაში.',
-  aboutP3:'თუ ფაილი არ გაქვთ — არაუშავს. ესკიზიც, ფოტოც და გატეხილი დეტალიც გამოდგება საწყის წერტილად.',
-  f1n:'2021', f1l:'დაარსდა',
-  f2n:'1,300+', f2l:'გამომწერი',
-  f3n:'3', f3l:'ძირითადი სერვისი',
-  f4n:'48სთ', f4l:'ჩვეულებრივი ვადა',
+    eyeAbout:'ჩვენ შესახებ',
+    aboutTitle:'პატარა საწარმო, რომელიც სერიოზულ დეტალებს ბეჭდავს',
+    aboutP1:'3D სტამბა 2021 წლიდან მუშაობს თბილისში. დავიწყეთ ერთი პრინტერით და კერძო შეკვეთებით, დღეს კი ვმუშაობთ ბიზნესებთან, არქიტექტორებთან და ინჟინრებთან.',
+    aboutP2:'ჩვენ არ ვართ მაღაზია — ვართ საწარმო. ეს ნიშნავს, რომ შეკვეთაზე გელაპარაკებით სანამ დავბეჭდავთ: მასალაზე, სისქეზე, დატვირთვაზე და იმაზე, თუ როგორ დაიშლება დეტალი ხმარებაში.',
+    aboutP3:'თუ ფაილი არ გაქვთ — არაუშავს. ესკიზიც, ფოტოც და გატეხილი დეტალიც გამოდგება საწყის წერტილად.',
+    f1n:'2021', f1l:'დაარსდა',
+    f2n:'1,300+', f2l:'გამომწერი',
+    f3n:'3', f3l:'ძირითადი სერვისი',
+    f4n:'48სთ', f4l:'ჩვეულებრივი ვადა',
 
-  eyeOrder:'შეკვეთა',
-  orderTitle:'აღწერეთ შეკვეთა — ჩვენ დაგიბრუნებთ ფასსა და ვადას',
-  orderSub:'შეავსეთ ველები, დააჭირეთ ღილაკს და თქვენს ფოსტის აპში გაიხსნება უკვე შევსებული წერილი. სურვილის შემთხვევაში, უბრალოდ დააკოპირეთ ტექსტი.',
-  lService:'რა გჭირდებათ', cPrint:'ბეჭდვა', cModel:'მოდელირება', cScan:'სკანირება', cUnsure:'ჯერ არ ვიცი',
-  lName:'სახელი', lContact:'ელფოსტა ან ტელეფონი', lQty:'რაოდენობა', lMaterial:'მასალა', optAny:'შემომთავაზეთ',
-  lDeadline:'როდისთვის', lFile:'ფაილის ბმული (Drive, WeTransfer)', lMsg:'აღწერეთ დეტალი — ზომა, დანიშნულება, დატვირთვა',
-  bSend:'წერილის გახსნა', bCopy:'ტექსტის კოპირება', copied:'დაკოპირდა',
-  orderHint:'ფაილი შეგიძლიათ პირდაპირ წერილს დაურთოთ. მიღებული ფორმატები: STL, OBJ, STEP, 3MF, ასევე ესკიზი ან ფოტო.',
-  pvTitle:'წერილის წინასწარი ხედი',
+    eyeOrder:'შეკვეთა',
+    orderTitle:'აღწერეთ შეკვეთა — ჩვენ დაგიბრუნებთ ფასსა და ვადას',
+    orderSub:'შეავსეთ ველები, დააჭირეთ ღილაკს და თქვენს ფოსტის აპში გაიხსნება უკვე შევსებული წერილი. სურვილის შემთხვევაში, უბრალოდ დააკოპირეთ ტექსტი.',
+    lService:'რა გჭირდებათ', cPrint:'ბეჭდვა', cModel:'მოდელირება', cScan:'სკანირება', cUnsure:'ჯერ არ ვიცი',
+    lName:'სახელი', lContact:'ელფოსტა ან ტელეფონი', lQty:'რაოდენობა', lMaterial:'მასალა', optAny:'შემომთავაზეთ',
+    lDeadline:'როდისთვის', lFile:'ფაილის ბმული (Drive, WeTransfer)', lMsg:'აღწერეთ დეტალი — ზომა, დანიშნულება, დატვირთვა',
+    bSend:'წერილის გახსნა', bCopy:'ტექსტის კოპირება', copied:'დაკოპირდა',
+    orderHint:'ფაილი შეგიძლიათ პირდაპირ წერილს დაურთოთ. მიღებული ფორმატები: STL, OBJ, STEP, 3MF, ასევე ესკიზი ან ფოტო.',
+    pvTitle:'წერილის წინასწარი ხედი',
 
-  eyeContact:'კონტაქტი',
-  contactTitle:'დაგვიკავშირდით',
-  contactSub:'ვპასუხობთ სამუშაო საათებში. ყველაზე სწრაფი გზა — ელფოსტა ან Instagram.',
-  lAddress:'მისამართი', vAddress:'ნუცუბიძის მესამე პლატო, თბილისი',
-  lHours:'სამუშაო საათები', vHours:'ორშ.–შაბ. · 10:00–19:00',
-  lPhone:'ტელეფონი',
-  madeIn:'დამზადებულია საქართველოში',
+    eyeContact:'კონტაქტი',
+    contactTitle:'დაგვიკავშირდით',
+    contactSub:'ვპასუხობთ სამუშაო საათებში. ყველაზე სწრაფი გზა — ელფოსტა ან Instagram.',
+    lAddress:'მისამართი', vAddress:'ნუცუბიძის მესამე პლატო, თბილისი',
+    lHours:'სამუშაო საათები', vHours:'ორშ.–შაბ. · 10:00–19:00',
+    lPhone:'ტელეფონი',
+    madeIn:'დამზადებულია საქართველოში',
 
-  // email template
-  eSubject:'შეკვეთა საიტიდან', eSvc:'სერვისი', eName:'სახელი', eContact:'კონტაქტი',
-  eQty:'რაოდენობა', eMat:'მასალა', eDate:'სასურველი ვადა', eFile:'ფაილი', eDesc:'აღწერა',
-  eEmpty:'—', eSign:'გამოგზავნილია 3dstamba.ge-დან'
-},
+    // email template
+    eSubject:'შეკვეთა საიტიდან', eSvc:'სერვისი', eName:'სახელი', eContact:'კონტაქტი',
+    eQty:'რაოდენობა', eMat:'მასალა', eDate:'სასურველი ვადა', eFile:'ფაილი', eDesc:'აღწერა',
+    eEmpty:'—', eSign:'გამოგზავნილია 3dstamba.ge-დან'
+  },
 
-en:{
-  status:'Tbilisi · taking orders',
-  nav1:'Services', nav2:'Work', nav3:'About', nav4:'Contact', navcta:'Order',
-  badge:'3D printing service · since 2021',
-  h1:'We print the things that <em>don\'t exist yet</em>.',
-  hsub:'3D Stamba is an online workshop in Tbilisi. We scan, model and print parts, prototypes and scale models. Send us a file — or just an idea.',
-  cta1:'Start an order', cta2:'See our work',
-  m1:'On the market since', m2:'Layer precision', m3:'Typical turnaround',
+  en:{
+    status:'Tbilisi · taking orders',
+    nav1:'Services', nav2:'Work', nav3:'About', nav4:'Contact', navcta:'Order',
+    badge:'3D printing service · since 2021',
+    h1:'We print the things that <em>don\'t exist yet</em>.',
+    hsub:'3D Stamba is an online workshop in Tbilisi. We scan, model and print parts, prototypes and scale models. Send us a file — or just an idea.',
+    cta1:'Start an order', cta2:'See our work',
+    m1:'On the market since', m2:'Layer precision', m3:'Typical turnaround',
 
-  eyeSvc:'What we do',
-  svcTitle:'Three stages — from a real object back to a real object',
-  svcSub:'Join at any stage: with a finished file, a drawing, a photo, or the broken part itself.',
-  stepLabel1:'Input', stepLabel2:'Preparation', stepLabel3:'Production',
-  s1t:'3D scanning',
-  s1d:'We turn a real object into an accurate digital model. Useful when you have the part but not the drawing.',
-  s1tag:'Reverse engineering',
-  s2t:'3D modeling',
-  s2d:'A CAD model from a sketch, a photo or a set of measurements. We prepare the file so the print doesn\'t fail.',
-  s2tag:'Scale models',
-  s3t:'3D printing',
-  s3d:'FDM printing — from a single part to a small batch, down to 0.1 mm layers.',
-  s3tag:'Small batches',
+    eyeSvc:'What we do',
+    svcTitle:'Three stages — from a real object back to a real object',
+    svcSub:'Join at any stage: with a finished file, a drawing, a photo, or the broken part itself.',
+    stepLabel1:'Input', stepLabel2:'Preparation', stepLabel3:'Production',
+    s1t:'3D scanning',
+    s1d:'We turn a real object into an accurate digital model. Useful when you have the part but not the drawing.',
+    s1tag:'Reverse engineering',
+    s2t:'3D modeling',
+    s2d:'A CAD model from a sketch, a photo or a set of measurements. We prepare the file so the print doesn\'t fail.',
+    s2tag:'Scale models',
+    s3t:'3D printing',
+    s3d:'FDM printing — from a single part to a small batch, down to 0.1 mm layers.',
+    s3tag:'Small batches',
 
-  eyeWork:'Our work',
-  workTitle:'Projects that are already in use',
-  workSub:'We work with gyms, cafés, architects, engineers and private customers across Georgia.',
-  pillPrint:'Printing', pillModel:'Modeling', pillScan:'Scanning', pillCustom:'Custom',
-  p1t:'Grade markers for a climbing gym',
-  p1d:'Colour-coded, hard-wearing route markers for the s.k.lucky climbing gym, with mounting holes built in.',
-  p2t:'Architectural scale models',
-  p2d:'Facade and structure models for architects — for client presentations and design sign-off.',
-  p3t:'Cat wall furniture',
-  p3d:'Brackets and mounts for wall shelves, supplied together with the timber parts as a ready kit.',
-  p4t:'Café display and decor',
-  p4d:'Wall decor printed in the brand\'s own colours for an ice cream shop.',
-  p5t:'Furniture and ladder end caps',
-  p5d:'Exact-fit caps for when the original is no longer sold — made from a scan or from your measurements.',
-  p6t:'Custom engineering parts',
-  p6d:'Housings, mounts and replacement parts — from a sketch to a finished, tested component.',
-  workNote:'More work, posted weekly:',
+    eyeWork:'Our work',
+    workTitle:'Projects that are already in use',
+    workSub:'We work with gyms, cafés, architects, engineers and private customers across Georgia.',
+    pillPrint:'Printing', pillModel:'Modeling', pillScan:'Scanning', pillCustom:'Custom',
+    p1t:'Grade markers for a climbing gym',
+    p1d:'Colour-coded, hard-wearing route markers for the s.k.lucky climbing gym, with mounting holes built in.',
+    p2t:'Architectural scale models',
+    p2d:'Facade and structure models for architects — for client presentations and design sign-off.',
+    p3t:'Cat wall furniture',
+    p3d:'Brackets and mounts for wall shelves, supplied together with the timber parts as a ready kit.',
+    p4t:'Café display and decor',
+    p4d:'Wall decor printed in the brand\'s own colours for an ice cream shop.',
+    p5t:'Furniture and ladder end caps',
+    p5d:'Exact-fit caps for when the original is no longer sold — made from a scan or from your measurements.',
+    p6t:'Custom engineering parts',
+    p6d:'Housings, mounts and replacement parts — from a sketch to a finished, tested component.',
+    workNote:'More work, posted weekly:',
 
-  eyeAbout:'About us',
-  aboutTitle:'A small workshop printing serious parts',
-  aboutP1:'3D Stamba has been working in Tbilisi since 2021. We started with one printer and private orders; today we work with businesses, architects and engineers.',
-  aboutP2:'We are a workshop, not a shop. That means we talk through the job before printing it: material, wall thickness, load, and how the part will actually fail in use.',
-  aboutP3:'No file? That\'s fine. A sketch, a photo or the broken part itself is a perfectly good starting point.',
-  f1n:'2021', f1l:'Founded',
-  f2n:'1,300+', f2l:'Followers',
-  f3n:'3', f3l:'Core services',
-  f4n:'48h', f4l:'Typical turnaround',
+    eyeAbout:'About us',
+    aboutTitle:'A small workshop printing serious parts',
+    aboutP1:'3D Stamba has been working in Tbilisi since 2021. We started with one printer and private orders; today we work with businesses, architects and engineers.',
+    aboutP2:'We are a workshop, not a shop. That means we talk through the job before printing it: material, wall thickness, load, and how the part will actually fail in use.',
+    aboutP3:'No file? That\'s fine. A sketch, a photo or the broken part itself is a perfectly good starting point.',
+    f1n:'2021', f1l:'Founded',
+    f2n:'1,300+', f2l:'Followers',
+    f3n:'3', f3l:'Core services',
+    f4n:'48h', f4l:'Typical turnaround',
 
-  eyeOrder:'Order',
-  orderTitle:'Describe the job — we\'ll send back a price and a date',
-  orderSub:'Fill in the fields and press the button: your mail app opens with the message already written. Or just copy the text and send it however you like.',
-  lService:'What do you need', cPrint:'Printing', cModel:'Modeling', cScan:'Scanning', cUnsure:'Not sure yet',
-  lName:'Name', lContact:'Email or phone', lQty:'Quantity', lMaterial:'Material', optAny:'Recommend one',
-  lDeadline:'Needed by', lFile:'File link (Drive, WeTransfer)', lMsg:'Describe the part — size, purpose, load',
-  bSend:'Open the email', bCopy:'Copy the text', copied:'Copied',
-  orderHint:'You can attach the file straight to the email. Accepted: STL, OBJ, STEP, 3MF — or a sketch or photo.',
-  pvTitle:'Email preview',
+    eyeOrder:'Order',
+    orderTitle:'Describe the job — we\'ll send back a price and a date',
+    orderSub:'Fill in the fields and press the button: your mail app opens with the message already written. Or just copy the text and send it however you like.',
+    lService:'What do you need', cPrint:'Printing', cModel:'Modeling', cScan:'Scanning', cUnsure:'Not sure yet',
+    lName:'Name', lContact:'Email or phone', lQty:'Quantity', lMaterial:'Material', optAny:'Recommend one',
+    lDeadline:'Needed by', lFile:'File link (Drive, WeTransfer)', lMsg:'Describe the part — size, purpose, load',
+    bSend:'Open the email', bCopy:'Copy the text', copied:'Copied',
+    orderHint:'You can attach the file straight to the email. Accepted: STL, OBJ, STEP, 3MF — or a sketch or photo.',
+    pvTitle:'Email preview',
 
-  eyeContact:'Contact',
-  contactTitle:'Get in touch',
-  contactSub:'We reply during working hours. Email and Instagram are the fastest way to reach us.',
-  lAddress:'Address', vAddress:'Nutsubidze 3rd Plateau, Tbilisi',
-  lHours:'Working hours', vHours:'Mon–Sat · 10:00–19:00',
-  lPhone:'Phone',
-  madeIn:'Made in Georgia',
+    eyeContact:'Contact',
+    contactTitle:'Get in touch',
+    contactSub:'We reply during working hours. Email and Instagram are the fastest way to reach us.',
+    lAddress:'Address', vAddress:'Nutsubidze 3rd Plateau, Tbilisi',
+    lHours:'Working hours', vHours:'Mon–Sat · 10:00–19:00',
+    lPhone:'Phone',
+    madeIn:'Made in Georgia',
 
-  eSubject:'Order from the website', eSvc:'Service', eName:'Name', eContact:'Contact',
-  eQty:'Quantity', eMat:'Material', eDate:'Needed by', eFile:'File', eDesc:'Description',
-  eEmpty:'—', eSign:'Sent from 3dstamba.ge'
-},
-
-ru:{
-  status:'Тбилиси · принимаем заказы',
-  nav1:'Услуги', nav2:'Работы', nav3:'О нас', nav4:'Контакты', navcta:'Заказать',
-  badge:'Сервис 3D-печати · с 2021 года',
-  h1:'Печатаем то, чего <em>ещё не существует</em>.',
-  hsub:'3D Stamba — онлайн-производство в Тбилиси. Сканируем, моделируем и печатаем детали, прототипы и макеты. Пришлите файл — или просто идею.',
-  cta1:'Оформить заказ', cta2:'Смотреть работы',
-  m1:'На рынке с', m2:'Точность слоя', m3:'Обычный срок',
-
-  eyeSvc:'Что мы делаем',
-  svcTitle:'Три этапа — от реального предмета к реальному предмету',
-  svcSub:'Подключайтесь на любом этапе: с готовым файлом, чертежом, фотографией или самой деталью.',
-  stepLabel1:'Вход', stepLabel2:'Подготовка', stepLabel3:'Производство',
-  s1t:'3D-сканирование',
-  s1d:'Превращаем реальный объект в точную цифровую модель. Полезно, когда деталь есть, а чертежа нет.',
-  s1tag:'Реверс-инжиниринг',
-  s2t:'3D-моделирование',
-  s2d:'CAD-модель по эскизу, фото или размерам. Готовим файл так, чтобы печать не сорвалась.',
-  s2tag:'Макеты',
-  s3t:'3D-печать',
-  s3d:'FDM-печать — от одной детали до малой серии, слой от 0,1 мм.',
-  s3tag:'Малые серии',
-
-  eyeWork:'Наши работы',
-  workTitle:'Проекты, которые уже работают',
-  workSub:'Работаем со скалодромами, кафе, архитекторами, инженерами и частными клиентами.',
-  pillPrint:'Печать', pillModel:'Моделирование', pillScan:'Сканирование', pillCustom:'Спецзаказ',
-  p1t:'Маркеры трасс для скалодрома',
-  p1d:'Цветные износостойкие маркеры сложности для скалодрома s.k.lucky — с готовыми отверстиями под крепёж.',
-  p2t:'Архитектурные макеты',
-  p2d:'Макеты фасадов и конструкций для архитекторов — для презентаций и согласования проекта.',
-  p3t:'Настенная мебель для кошек',
-  p3d:'Кронштейны и держатели для настенных полок вместе с деревянными элементами — готовый комплект.',
-  p4t:'Витрина и декор для кафе',
-  p4d:'Настенный декор в фирменных цветах для кафе-мороженого.',
-  p5t:'Накладки для мебели и лестниц',
-  p5d:'Заглушки точно по размеру, когда оригинал уже не найти — по сканированию или вашим размерам.',
-  p6t:'Индивидуальные детали',
-  p6d:'Корпуса, крепления и запчасти — от эскиза до готовой детали.',
-  workNote:'Больше работ, каждую неделю:',
-
-  eyeAbout:'О нас',
-  aboutTitle:'Небольшое производство, которое печатает серьёзные детали',
-  aboutP1:'3D Stamba работает в Тбилиси с 2021 года. Начинали с одного принтера и частных заказов, сегодня работаем с бизнесом, архитекторами и инженерами.',
-  aboutP2:'Мы не магазин, а производство. Это значит, что мы обсуждаем заказ до печати: материал, толщину стенок, нагрузку и то, как деталь поведёт себя в работе.',
-  aboutP3:'Нет файла — не страшно. Эскиз, фотография или сама сломанная деталь вполне подойдут как отправная точка.',
-  f1n:'2021', f1l:'Основана',
-  f2n:'1 300+', f2l:'Подписчиков',
-  f3n:'3', f3l:'Основных услуги',
-  f4n:'48ч', f4l:'Обычный срок',
-
-  eyeOrder:'Заказ',
-  orderTitle:'Опишите заказ — вернёмся с ценой и сроком',
-  orderSub:'Заполните поля и нажмите кнопку: почтовое приложение откроется с уже готовым письмом. Или просто скопируйте текст.',
-  lService:'Что вам нужно', cPrint:'Печать', cModel:'Моделирование', cScan:'Сканирование', cUnsure:'Пока не знаю',
-  lName:'Имя', lContact:'Email или телефон', lQty:'Количество', lMaterial:'Материал', optAny:'На ваш выбор',
-  lDeadline:'К какому сроку', lFile:'Ссылка на файл (Drive, WeTransfer)', lMsg:'Опишите деталь — размер, назначение, нагрузка',
-  bSend:'Открыть письмо', bCopy:'Скопировать текст', copied:'Скопировано',
-  orderHint:'Файл можно приложить прямо к письму. Принимаем: STL, OBJ, STEP, 3MF, а также эскиз или фото.',
-  pvTitle:'Предпросмотр письма',
-
-  eyeContact:'Контакты',
-  contactTitle:'Свяжитесь с нами',
-  contactSub:'Отвечаем в рабочие часы. Быстрее всего — по почте или в Instagram.',
-  lAddress:'Адрес', vAddress:'Третье плато Нуцубидзе, Тбилиси',
-  lHours:'Часы работы', vHours:'Пн–Сб · 10:00–19:00',
-  lPhone:'Телефон',
-  madeIn:'Сделано в Грузии',
-
-  eSubject:'Заказ с сайта', eSvc:'Услуга', eName:'Имя', eContact:'Контакт',
-  eQty:'Количество', eMat:'Материал', eDate:'Срок', eFile:'Файл', eDesc:'Описание',
-  eEmpty:'—', eSign:'Отправлено с 3dstamba.ge'
-}
-};
-
-const EMAIL = 'printer3dservice@gmail.com';
-let lang = 'ka';
-
-/* ---------- language switching ---------- */
-function setLang(next){
-  lang = next;
-  const t = T[lang];
-  document.documentElement.lang = lang;
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const v = t[el.dataset.i18n];
-    if(v === undefined) return;
-    if(v.includes('<em>')) el.innerHTML = v; else el.textContent = v;
-  });
-  document.querySelectorAll('.lang').forEach(b=>{
-    b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
-  });
-  renderMail();
-}
-document.querySelectorAll('.lang').forEach(b=>{
-  b.addEventListener('click', ()=> setLang(b.dataset.lang));
-});
-
-/* ---------- mobile menu ---------- */
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
-burger.addEventListener('click', ()=>{
-  const open = menu.classList.toggle('open');
-  burger.setAttribute('aria-expanded', String(open));
-});
-menu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=>{
-  menu.classList.remove('open'); burger.setAttribute('aria-expanded','false');
-}));
-
-/* ---------- service chips ---------- */
-let service = 'print';
-document.querySelectorAll('#serviceChips .chip').forEach(chip=>{
-  chip.addEventListener('click', ()=>{
-    service = chip.dataset.svc;
-    document.querySelectorAll('#serviceChips .chip').forEach(c=>
-      c.setAttribute('aria-pressed', String(c === chip)));
-    renderMail();
-  });
-});
-
-/* ---------- live email preview ---------- */
-const F = id => document.getElementById(id);
-const fields = ['f-name','f-contact','f-qty','f-material','f-deadline','f-file','f-msg'];
-fields.forEach(id => F(id).addEventListener('input', renderMail));
-
-function serviceLabel(){
-  const t = T[lang];
-  return {print:t.cPrint, model:t.cModel, scan:t.cScan, unsure:t.cUnsure}[service];
-}
-function buildMail(){
-  const t = T[lang], dash = t.eEmpty;
-  const v = id => (F(id).value || '').trim();
-  const lines = [
-    `${t.eSvc}: ${serviceLabel()}`,
-    `${t.eName}: ${v('f-name') || dash}`,
-    `${t.eContact}: ${v('f-contact') || dash}`,
-    `${t.eQty}: ${v('f-qty') || dash}`,
-    `${t.eMat}: ${v('f-material') || dash}`,
-    `${t.eDate}: ${v('f-deadline') || dash}`,
-    `${t.eFile}: ${v('f-file') || dash}`,
-    '',
-    `${t.eDesc}:`,
-    v('f-msg') || dash,
-    '',
-    '—',
-    t.eSign
-  ];
-  return {
-    subject: `${t.eSubject} — ${serviceLabel()}`,
-    body: lines.join('\n')
-  };
-}
-function renderMail(){
-  const {subject, body} = buildMail();
-  const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-  F('mailPreview').innerHTML =
-    '<b>' + esc(subject) + '</b>\n\n' + esc(body);
-}
-
-/* ---------- send / copy ---------- */
-F('orderForm').addEventListener('submit', e=>{
-  e.preventDefault();
-  const {subject, body} = buildMail();
-  window.location.href =
-    `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
-F('copyBtn').addEventListener('click', async ()=>{
-  const {subject, body} = buildMail();
-  const text = subject + '\n\n' + body;
-  try{
-    await navigator.clipboard.writeText(text);
-  }catch(_){
-    const ta = document.createElement('textarea');
-    ta.value = text; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); ta.remove();
+    eSubject:'Order from the website', eSvc:'Service', eName:'Name', eContact:'Contact',
+    eQty:'Quantity', eMat:'Material', eDate:'Needed by', eFile:'File', eDesc:'Description',
+    eEmpty:'—', eSign:'Sent from 3dstamba.ge'
   }
-  const msg = F('copiedMsg');
-  msg.classList.add('on');
-  setTimeout(()=> msg.classList.remove('on'), 1800);
-});
+  };
 
-/* ---------- init ---------- */
-document.getElementById('year').textContent = new Date().getFullYear();
-setLang('ka');
+  const EMAIL = 'printer3dservice@gmail.com';
+  let lang = 'ka';
+
+  /* ---------- language switching ---------- */
+  function setLang(next){
+    lang = next;
+    const t = T[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const v = t[el.dataset.i18n];
+      if(v === undefined) return;
+      if(v.includes('<em>')) el.innerHTML = v; else el.textContent = v;
+    });
+    document.querySelectorAll('.lang').forEach(b=>{
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+    renderMail();
+  }
+  document.querySelectorAll('.lang').forEach(b=>{
+    b.addEventListener('click', ()=> setLang(b.dataset.lang));
+  });
+
+  /* ---------- mobile menu ---------- */
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+  burger.addEventListener('click', ()=>{
+    const open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=>{
+    menu.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+  }));
+
+  /* ---------- service chips ---------- */
+  let service = 'print';
+  document.querySelectorAll('#serviceChips .chip').forEach(chip=>{
+    chip.addEventListener('click', ()=>{
+      service = chip.dataset.svc;
+      document.querySelectorAll('#serviceChips .chip').forEach(c=>
+        c.setAttribute('aria-pressed', String(c === chip)));
+      renderMail();
+    });
+  });
+
+  /* ---------- live email preview ---------- */
+  const F = id => document.getElementById(id);
+  const fields = ['f-name','f-contact','f-qty','f-material','f-deadline','f-file','f-msg'];
+  fields.forEach(id => F(id).addEventListener('input', renderMail));
+
+  function serviceLabel(){
+    const t = T[lang];
+    return {print:t.cPrint, model:t.cModel, scan:t.cScan, unsure:t.cUnsure}[service];
+  }
+  function buildMail(){
+    const t = T[lang], dash = t.eEmpty;
+    const v = id => (F(id).value || '').trim();
+    const lines = [
+      `${t.eSvc}: ${serviceLabel()}`,
+      `${t.eName}: ${v('f-name') || dash}`,
+      `${t.eContact}: ${v('f-contact') || dash}`,
+      `${t.eQty}: ${v('f-qty') || dash}`,
+      `${t.eMat}: ${v('f-material') || dash}`,
+      `${t.eDate}: ${v('f-deadline') || dash}`,
+      `${t.eFile}: ${v('f-file') || dash}`,
+      '',
+      `${t.eDesc}:`,
+      v('f-msg') || dash,
+      '',
+      '—',
+      t.eSign
+    ];
+    return {
+      subject: `${t.eSubject} — ${serviceLabel()}`,
+      body: lines.join('\n')
+    };
+  }
+  function renderMail(){
+    const {subject, body} = buildMail();
+    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+    F('mailPreview').innerHTML =
+      '<b>' + esc(subject) + '</b>\n\n' + esc(body);
+  }
+
+  /* ---------- send / copy ---------- */
+  F('orderForm').addEventListener('submit', e=>{
+    e.preventDefault();
+    const {subject, body} = buildMail();
+    window.location.href =
+      `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+  F('copyBtn').addEventListener('click', async ()=>{
+    const {subject, body} = buildMail();
+    const text = subject + '\n\n' + body;
+    try{
+      await navigator.clipboard.writeText(text);
+    }catch(_){
+      const ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); ta.remove();
+    }
+    const msg = F('copiedMsg');
+    msg.classList.add('on');
+    setTimeout(()=> msg.classList.remove('on'), 1800);
+  });
+
+  /* ---------- init ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+  setLang('ka');
 </script>
 </body>
 </html>
