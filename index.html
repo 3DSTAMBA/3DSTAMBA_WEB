@@ -757,8 +757,7 @@
     const open = menu.classList.toggle('open');
     burger.setAttribute('aria-expanded', String(open));
   });
-  menu.querySelectorAll('a').forEach(a=> a.addEventList
-  ener('click', ()=>{
+  menu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=>{
     menu.classList.remove('open'); burger.setAttribute('aria-expanded','false');
   }));
 
