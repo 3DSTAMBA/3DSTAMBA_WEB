@@ -761,9 +761,14 @@
     menu.classList.remove('open'); burger.setAttribute('aria-expanded','false');
   }));
 
-  /* ---------- hide a video if its file is missing ---------- */
-  document.querySelectorAll('.step-video').forEach(v=>{
-    v.addEventListener('error', ()=> v.style.display='none', true);
+  /* ---------- media check ----------
+     Videos and photos are NOT hidden on failure — a missing file stays
+     visible so the problem is obvious, and its path is logged to the
+     console (press F12 -> Console) so you can see exactly what 404'd. */
+  document.querySelectorAll('.step-video, .thumb img').forEach(el=>{
+    el.addEventListener('error', ()=>{
+      console.warn('Media not found:', el.getAttribute('src'));
+    }, true);
   });
 
   /* ---------- init ---------- */
