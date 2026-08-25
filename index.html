@@ -95,9 +95,9 @@
       border-bottom:1px solid var(--line-soft);
     }
     .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-    .mark{width:40px;height:40px;border-radius:50%;background:var(--amber);display:grid;place-items:center;flex:none;overflow:hidden}
+    .mark{width:40px;height:40px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden}
     .mark svg{width:24px;height:24px}
-    .mark img{width:100%;height:100%;max-width:100%;object-fit:contain;display:block}
+    .mark img{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;display:block}
     .brand b{font-family:var(--display);font-size:1.05rem;font-weight:700;letter-spacing:.01em;display:block;line-height:1.1}
     .brand small{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--ice);text-transform:uppercase}
     .menu{display:flex;align-items:center;gap:1.75rem}
@@ -266,8 +266,8 @@
 <!-- ============ NAV ============ -->
 <nav>
   <a class="brand" href="#top">
-    <span class="mark">
-      <img src="image/Logo.png" alt="3D Stamba">
+    <span class="mark" style="overflow:hidden">
+      <img src="image/Logo.png" alt="3D Stamba" style="width:100%;height:100%;object-fit:contain;display:block">
     </span>
     <span>
       <b>3D STAMBA</b>
@@ -598,8 +598,8 @@
 <!-- ============ FOOTER ============ -->
 <footer>
   <a class="brand" href="#top" style="text-decoration:none">
-    <span class="mark" style="width:32px;height:32px">
-      <img src="image/Logo.png" alt="">
+    <span class="mark" style="width:32px;height:32px;overflow:hidden">
+      <img src="image/Logo.png" alt="" style="width:100%;height:100%;object-fit:contain;display:block">
     </span>
     <span><b style="font-size:.9rem">3D STAMBA</b></span>
   </a>
