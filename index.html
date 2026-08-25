@@ -212,46 +212,6 @@
     .fig b{display:block;font-family:var(--display);font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700;color:var(--amber);letter-spacing:-.02em;line-height:1}
     .fig span{display:block;margin-top:.45rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ice)}
 
-    /* ---------- order ticket ---------- */
-    #order{background:var(--void)}
-    .ticket{
-      display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
-      border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--steel)
-    }
-    .ticket-form{padding:clamp(1.4rem,3vw,2.25rem)}
-    .field{margin-bottom:1rem}
-    .field label{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ice);margin-bottom:.4rem}
-    .field input,.field select,.field textarea{
-      width:100%;background:var(--void);border:1px solid var(--line-soft);color:var(--white);
-      font-family:var(--body);font-size:.92rem;padding:.7rem .85rem;border-radius:5px;transition:border-color .18s
-    }
-    .field textarea{min-height:110px;resize:vertical}
-    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--amber);outline:none}
-    .field input::placeholder,.field textarea::placeholder{color:#5B7189}
-    .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-    .chips{display:flex;flex-wrap:wrap;gap:.5rem}
-    .chip{
-      font-family:var(--body);font-size:.85rem;color:var(--ice);cursor:pointer;
-      border:1px solid var(--line-soft);border-radius:100px;padding:.45rem 1rem;background:var(--void);transition:.18s
-    }
-    .chip:hover{color:var(--white);border-color:var(--line)}
-    .chip[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:var(--void);font-weight:700}
-    .submit-row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-top:1.4rem}
-    button.btn{border:1.5px solid transparent;cursor:pointer;font-family:var(--body)}
-    .hint{font-size:.78rem;color:var(--ice);margin-top:.9rem;line-height:1.6}
-    .hint a{color:var(--amber)}
-
-    .preview{background:var(--void);border-left:1px solid var(--line-soft);padding:clamp(1.4rem,3vw,2.25rem);display:flex;flex-direction:column}
-    .preview-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem;padding-bottom:.9rem;border-bottom:1px dashed var(--line-soft)}
-    .preview-head strong{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-weight:700}
-    pre.mail{
-      font-family:var(--mono);font-size:.74rem;line-height:1.85;color:var(--ice);
-      white-space:pre-wrap;word-break:break-word;flex:1;margin:0
-    }
-    pre.mail b{color:var(--white);font-weight:700}
-    .copied{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);opacity:0;transition:opacity .2s}
-    .copied.on{opacity:1}
-
     /* ---------- contact ---------- */
     #contact{background:var(--navy)}
     .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem}
@@ -275,8 +235,6 @@
       .pipe{grid-template-columns:1fr}
       .grid{grid-template-columns:1fr 1fr}
       .about-grid{grid-template-columns:1fr}
-      .ticket{grid-template-columns:1fr}
-      .preview{border-left:none;border-top:1px solid var(--line-soft)}
       .menu{display:none}
       .menu.open{
         display:flex;flex-direction:column;align-items:flex-start;gap:1rem;
@@ -287,7 +245,6 @@
     }
     @media(max-width:620px){
       .grid{grid-template-columns:1fr}
-      .row{grid-template-columns:1fr}
       .hero-meta{gap:1.25rem}
     }
     @media(prefers-reduced-motion:reduce){
@@ -323,7 +280,7 @@
     <a href="#work" data-i18n="nav2"></a>
     <a href="#about" data-i18n="nav3"></a>
     <a href="#contact" data-i18n="nav4"></a>
-    <a href="#order" class="btn-order" data-i18n="navcta"></a>
+    <a href="#contact" class="btn-order" data-i18n="navcta"></a>
   </div>
 </nav>
 
@@ -336,7 +293,7 @@
       <h1 data-i18n="h1"></h1>
       <p data-i18n="hsub"></p>
       <div class="hero-actions">
-        <a href="#order" class="btn btn-primary" data-i18n="cta1"></a>
+        <a href="#contact" class="btn btn-primary" data-i18n="cta1"></a>
         <a href="#work" class="btn btn-ghost" data-i18n="cta2"></a>
       </div>
       <div class="hero-meta">
@@ -575,90 +532,6 @@
   </div>
 </section>
 
-<!-- ============ ORDER TICKET ============ -->
-<section id="order">
-  <div class="wrap">
-    <div class="head">
-      <div class="eyebrow"><span class="mono" data-i18n="eyeOrder"></span></div>
-      <h2 data-i18n="orderTitle"></h2>
-      <p class="lede" data-i18n="orderSub"></p>
-    </div>
-
-    <div class="ticket">
-      <form class="ticket-form" id="orderForm" novalidate>
-        <div class="field">
-          <label data-i18n="lService"></label>
-          <div class="chips" id="serviceChips" role="group">
-            <button type="button" class="chip" data-svc="print" aria-pressed="true" data-i18n="cPrint"></button>
-            <button type="button" class="chip" data-svc="model" aria-pressed="false" data-i18n="cModel"></button>
-            <button type="button" class="chip" data-svc="scan" aria-pressed="false" data-i18n="cScan"></button>
-            <button type="button" class="chip" data-svc="unsure" aria-pressed="false" data-i18n="cUnsure"></button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="field">
-            <label for="f-name" data-i18n="lName"></label>
-            <input id="f-name" type="text" autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="f-contact" data-i18n="lContact"></label>
-            <input id="f-contact" type="text" autocomplete="email" placeholder="email / +995 ...">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="field">
-            <label for="f-qty" data-i18n="lQty"></label>
-            <input id="f-qty" type="text" inputmode="numeric" placeholder="1">
-          </div>
-          <div class="field">
-            <label for="f-material" data-i18n="lMaterial"></label>
-            <select id="f-material">
-              <option value="" data-i18n="optAny"></option>
-              <option value="PLA">PLA</option>
-              <option value="PETG">PETG</option>
-              <option value="ABS">ABS</option>
-              <option value="TPU">TPU / flex</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="field">
-            <label for="f-deadline" data-i18n="lDeadline"></label>
-            <input id="f-deadline" type="date">
-          </div>
-          <div class="field">
-            <label for="f-file" data-i18n="lFile"></label>
-            <input id="f-file" type="url" placeholder="https://drive.google.com/...">
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="f-msg" data-i18n="lMsg"></label>
-          <textarea id="f-msg"></textarea>
-        </div>
-
-        <div class="submit-row">
-          <button type="submit" class="btn btn-primary" data-i18n="bSend"></button>
-          <button type="button" class="btn btn-ghost" id="copyBtn" data-i18n="bCopy"></button>
-          <span class="copied" id="copiedMsg" data-i18n="copied"></span>
-        </div>
-        <p class="hint" data-i18n="orderHint"></p>
-      </form>
-
-      <aside class="preview">
-        <div class="preview-head">
-          <strong data-i18n="pvTitle"></strong>
-          <span class="mono" style="color:var(--ice)">printer3dservice@gmail.com</span>
-        </div>
-        <pre class="mail" id="mailPreview"></pre>
-      </aside>
-    </div>
-  </div>
-</section>
-
 <!-- ============ CONTACT ============ -->
 <section id="contact">
   <div class="wrap">
@@ -745,7 +618,7 @@
     badge:'3D ბეჭდვის სერვისი · 2021 წლიდან',
     h1:'ვბეჭდავთ იმას, რაც ჯერ <em>არ არსებობს</em>.',
     hsub:'3D სტამბა — ონლაინ საწარმო თბილისში. ვასკანერებთ, ვმოდელირებთ და ვბეჭდავთ დეტალებს, პროტოტიპებსა და მაკეტებს. გამოგვიგზავნეთ ფაილი — ან უბრალოდ იდეა.',
-    cta1:'შეკვეთის გაგზავნა', cta2:'ნამუშევრების ნახვა',
+    cta1:'შეკვეთის განთავსება', cta2:'ნამუშევრების ნახვა',
     m1:'ბაზარზე', m2:'ფენის სიზუსტე', m3:'ჩვეულებრივი ვადა',
 
     eyeSvc:'რას ვაკეთებთ',
@@ -790,28 +663,13 @@
     f3n:'3', f3l:'ძირითადი სერვისი',
     f4n:'48სთ', f4l:'ჩვეულებრივი ვადა',
 
-    eyeOrder:'შეკვეთა',
-    orderTitle:'აღწერეთ შეკვეთა — ჩვენ დაგიბრუნებთ ფასსა და ვადას',
-    orderSub:'შეავსეთ ველები, დააჭირეთ ღილაკს და თქვენს ფოსტის აპში გაიხსნება უკვე შევსებული წერილი. სურვილის შემთხვევაში, უბრალოდ დააკოპირეთ ტექსტი.',
-    lService:'რა გჭირდებათ', cPrint:'ბეჭდვა', cModel:'მოდელირება', cScan:'სკანირება', cUnsure:'ჯერ არ ვიცი',
-    lName:'სახელი', lContact:'ელფოსტა ან ტელეფონი', lQty:'რაოდენობა', lMaterial:'მასალა', optAny:'შემომთავაზეთ',
-    lDeadline:'როდისთვის', lFile:'ფაილის ბმული (Drive, WeTransfer)', lMsg:'აღწერეთ დეტალი — ზომა, დანიშნულება, დატვირთვა',
-    bSend:'წერილის გახსნა', bCopy:'ტექსტის კოპირება', copied:'დაკოპირდა',
-    orderHint:'ფაილი შეგიძლიათ პირდაპირ წერილს დაურთოთ. მიღებული ფორმატები: STL, OBJ, STEP, 3MF, ასევე ესკიზი ან ფოტო.',
-    pvTitle:'წერილის წინასწარი ხედი',
-
     eyeContact:'კონტაქტი',
     contactTitle:'დაგვიკავშირდით',
     contactSub:'ვპასუხობთ სამუშაო საათებში. ყველაზე სწრაფი გზა — ელფოსტა ან Instagram.',
     lAddress:'მისამართი', vAddress:'ნუცუბიძის მესამე პლატო, თბილისი',
     lHours:'სამუშაო საათები', vHours:'ორშ.–შაბ. · 10:00–19:00',
     lPhone:'ტელეფონი',
-    madeIn:'დამზადებულია საქართველოში',
-
-    // email template
-    eSubject:'შეკვეთა საიტიდან', eSvc:'სერვისი', eName:'სახელი', eContact:'კონტაქტი',
-    eQty:'რაოდენობა', eMat:'მასალა', eDate:'სასურველი ვადა', eFile:'ფაილი', eDesc:'აღწერა',
-    eEmpty:'—', eSign:'გამოგზავნილია 3dstamba.ge-დან'
+    madeIn:'დამზადებულია საქართველოში'
   },
 
   en:{
@@ -820,7 +678,7 @@
     badge:'3D printing service · since 2021',
     h1:'We print the things that <em>don\'t exist yet</em>.',
     hsub:'3D Stamba is an online workshop in Tbilisi. We scan, model and print parts, prototypes and scale models. Send us a file — or just an idea.',
-    cta1:'Start an order', cta2:'See our work',
+    cta1:'Place an order', cta2:'See our work',
     m1:'On the market since', m2:'Layer precision', m3:'Typical turnaround',
 
     eyeSvc:'What we do',
@@ -865,31 +723,16 @@
     f3n:'3', f3l:'Core services',
     f4n:'48h', f4l:'Typical turnaround',
 
-    eyeOrder:'Order',
-    orderTitle:'Describe the job — we\'ll send back a price and a date',
-    orderSub:'Fill in the fields and press the button: your mail app opens with the message already written. Or just copy the text and send it however you like.',
-    lService:'What do you need', cPrint:'Printing', cModel:'Modeling', cScan:'Scanning', cUnsure:'Not sure yet',
-    lName:'Name', lContact:'Email or phone', lQty:'Quantity', lMaterial:'Material', optAny:'Recommend one',
-    lDeadline:'Needed by', lFile:'File link (Drive, WeTransfer)', lMsg:'Describe the part — size, purpose, load',
-    bSend:'Open the email', bCopy:'Copy the text', copied:'Copied',
-    orderHint:'You can attach the file straight to the email. Accepted: STL, OBJ, STEP, 3MF — or a sketch or photo.',
-    pvTitle:'Email preview',
-
     eyeContact:'Contact',
     contactTitle:'Get in touch',
     contactSub:'We reply during working hours. Email and Instagram are the fastest way to reach us.',
     lAddress:'Address', vAddress:'Nutsubidze 3rd Plateau, Tbilisi',
     lHours:'Working hours', vHours:'Mon–Sat · 10:00–19:00',
     lPhone:'Phone',
-    madeIn:'Made in Georgia',
-
-    eSubject:'Order from the website', eSvc:'Service', eName:'Name', eContact:'Contact',
-    eQty:'Quantity', eMat:'Material', eDate:'Needed by', eFile:'File', eDesc:'Description',
-    eEmpty:'—', eSign:'Sent from 3dstamba.ge'
+    madeIn:'Made in Georgia'
   }
   };
 
-  const EMAIL = 'printer3dservice@gmail.com';
   let lang = 'ka';
 
   /* ---------- language switching ---------- */
@@ -905,7 +748,6 @@
     document.querySelectorAll('.lang').forEach(b=>{
       b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
     });
-    renderMail();
   }
   document.querySelectorAll('.lang').forEach(b=>{
     b.addEventListener('click', ()=> setLang(b.dataset.lang));
@@ -921,78 +763,6 @@
   menu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=>{
     menu.classList.remove('open'); burger.setAttribute('aria-expanded','false');
   }));
-
-  /* ---------- service chips ---------- */
-  let service = 'print';
-  document.querySelectorAll('#serviceChips .chip').forEach(chip=>{
-    chip.addEventListener('click', ()=>{
-      service = chip.dataset.svc;
-      document.querySelectorAll('#serviceChips .chip').forEach(c=>
-        c.setAttribute('aria-pressed', String(c === chip)));
-      renderMail();
-    });
-  });
-
-  /* ---------- live email preview ---------- */
-  const F = id => document.getElementById(id);
-  const fields = ['f-name','f-contact','f-qty','f-material','f-deadline','f-file','f-msg'];
-  fields.forEach(id => F(id).addEventListener('input', renderMail));
-
-  function serviceLabel(){
-    const t = T[lang];
-    return {print:t.cPrint, model:t.cModel, scan:t.cScan, unsure:t.cUnsure}[service];
-  }
-  function buildMail(){
-    const t = T[lang], dash = t.eEmpty;
-    const v = id => (F(id).value || '').trim();
-    const lines = [
-      `${t.eSvc}: ${serviceLabel()}`,
-      `${t.eName}: ${v('f-name') || dash}`,
-      `${t.eContact}: ${v('f-contact') || dash}`,
-      `${t.eQty}: ${v('f-qty') || dash}`,
-      `${t.eMat}: ${v('f-material') || dash}`,
-      `${t.eDate}: ${v('f-deadline') || dash}`,
-      `${t.eFile}: ${v('f-file') || dash}`,
-      '',
-      `${t.eDesc}:`,
-      v('f-msg') || dash,
-      '',
-      '—',
-      t.eSign
-    ];
-    return {
-      subject: `${t.eSubject} — ${serviceLabel()}`,
-      body: lines.join('\n')
-    };
-  }
-  function renderMail(){
-    const {subject, body} = buildMail();
-    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-    F('mailPreview').innerHTML =
-      '<b>' + esc(subject) + '</b>\n\n' + esc(body);
-  }
-
-  /* ---------- send / copy ---------- */
-  F('orderForm').addEventListener('submit', e=>{
-    e.preventDefault();
-    const {subject, body} = buildMail();
-    window.location.href =
-      `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  });
-  F('copyBtn').addEventListener('click', async ()=>{
-    const {subject, body} = buildMail();
-    const text = subject + '\n\n' + body;
-    try{
-      await navigator.clipboard.writeText(text);
-    }catch(_){
-      const ta = document.createElement('textarea');
-      ta.value = text; document.body.appendChild(ta); ta.select();
-      document.execCommand('copy'); ta.remove();
-    }
-    const msg = F('copiedMsg');
-    msg.classList.add('on');
-    setTimeout(()=> msg.classList.remove('on'), 1800);
-  });
 
   /* ---------- init ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();
